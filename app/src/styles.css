@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0px;
+  margin: 0px;
+  /*font-family: Arial;*/
+  font-size: 1em;
+  font-weight: 400;
+}
+
+body {
+  width: 100%;
+  background-color: rgb(6,12,53);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#bodyMain {
+  flex: 1;
+}
+
+footer {
+  background-color: rgb(3,3,3);
+  text-align: center;
+  color: white;
+  font-size: 80%;
+  padding: 0 2rem;
+  height: 2rem;
+}
+
+carousel:focus {
+  outline: none;
+}
+
+.slide {
+  outline: none;
+}
+
+.dropdown-item {
+  padding: 0;
+}
+
+.dropdown-menu {
+  background-color: rgb(6,12,53);
+  border: 1px solid rgba(255,255,255, 0.7);
+}
+
+.carousel-control-prev-icon {
+  width: 1rem;
+}
+
+.carousel-control-next-icon {
+  width: 1rem;
+}
+
+app-card-carousel .carousel-indicators {
+  margin-bottom: 0;
+}
+
+app-card-carousel .carousel-control-prev {
+  width: 1rem;
+}
+app-card-carousel .carousel-control-next {
+  width: 1rem;
+}
+
+
+.topCarousel .carousel-indicators {
+  margin-bottom: 2.6rem;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.topCarousel .carousel-control-prev {
+  width: 3rem;
+  height: 20%;
+  top: 40%;
+}
+.topCarousel .carousel-control-next {
+  width: 3rem;
+  height: 20%;
+  top: 40%;
+}

@@ -1,0 +1,45 @@
+#homeMain {
+  padding-top: 3.5rem
+}
+
+.topCarousel {
+  margin: 0 auto;
+  width: 70%;
+  padding-bottom: 1.6rem;
+}
+
+
+#homeMedia {
+  margin: 0 5rem 6rem 5rem;
+  color: white;
+}
+
+.homeMediaItem {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-left: 2.5%;
+  font-size: 240%;
+}
+
+@media screen and (max-width: 600px) {
+  #homeMedia {
+    margin: 0 5% 3rem 5%;
+  }
+
+  .topCarousel {
+    width: 90%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .homeMediaItem {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-left: 13%;
+  }
+
+}

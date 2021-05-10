@@ -1,0 +1,47 @@
+<div id="homeMain">
+  <ngb-carousel *ngIf="nowPlayingMovies.length" class="topCarousel" [interval]="5000" [showNavigationIndicators]="cardNum>1"
+                [pauseOnHover]="true" [pauseOnFocus]="true">
+    <ng-template ngbSlide *ngFor="let m of nowPlayingMovies; index as i">
+      <app-home-carousel [movie]="m"></app-home-carousel>
+    </ng-template>
+  </ngb-carousel>
+
+  <div id="homeMedia">
+    <div *ngIf="continueWatching.length" class="homeMediaItem">
+      <h2>Continue Watching</h2>
+      <app-card-carousel [cardNum]="cardNum" [items]="continueWatching" [type]="'flex'"></app-card-carousel>
+    </div>
+
+    <div *ngIf="popularMovies.length" class="homeMediaItem">
+      <h2>Popular Movies</h2>
+      <app-card-carousel [cardNum] = "cardNum" [items]="popularMovies" [type]="'movie'"></app-card-carousel>
+    </div>
+
+    <div *ngIf="topRatedMovies.length" class="homeMediaItem">
+      <h2>Top Rated Movies</h2>
+      <app-card-carousel [cardNum] = "cardNum" [items]="topRatedMovies" [type]="'movie'"></app-card-carousel>
+    </div>
+
+    <div *ngIf="trendingMovies.length" class="homeMediaItem">
+      <h2>Trending Movies</h2>
+      <app-card-carousel [cardNum] = "cardNum" [items]="trendingMovies" [type]="'movie'"></app-card-carousel>
+    </div>
+
+    <div *ngIf="popularTvs.length" class="homeMediaItem">
+      <h2>Popular TV Shows</h2>
+      <app-card-carousel [cardNum] = "cardNum" [items]="popularTvs" [type]="'tv'"></app-card-carousel>
+    </div>
+
+    <div *ngIf="topRatedTvs.length" class="homeMediaItem">
+      <h2>Top Rated TV Shows</h2>
+      <app-card-carousel [cardNum] = "cardNum" [items]="topRatedTvs" [type]="'tv'"></app-card-carousel>
+    </div>
+
+    <div *ngIf="trendingTvs.length" class="homeMediaItem">
+      <h2>Trending TV Shows</h2>
+      <app-card-carousel [cardNum] = "cardNum" [items]="trendingTvs" [type]="'tv'"></app-card-carousel>
+    </div>
+
+  </div>
+
+</div>

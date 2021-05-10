@@ -1,0 +1,134 @@
+#detailMain {
+  width: 76%;
+  margin: 0 auto;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.col-sm-8 {
+  margin: 0;
+}
+
+.col {
+  padding: 0;
+  margin: 0;
+}
+
+.col-sm-1 {
+  padding: 0;
+  margin: 2% -2.5%;
+}
+
+.detailTagline {
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.detailTime {
+  margin-top: 1rem;
+}
+
+.detailTime span {
+  font-size: 1.05em;
+}
+
+span {
+  font-weight: 200;
+}
+
+.ratingAsterisk {
+  vertical-align: -2px;
+}
+
+.detailInfo span{
+  font-size: 0.9em;
+  font-weight: 100;
+  opacity: 0.8;
+}
+
+.detailInfo .detailInfoTitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 1;
+}
+
+p {
+  margin: 0;
+  font-weight: 200;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+ngb-alert {
+  margin-top: 1rem;
+}
+
+.detailMoreInfo {
+  margin: 1.5rem 0 3rem 0.8rem;
+}
+
+.detailMoreInfo p {
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.twitter {
+  color: rgb(41, 157, 237);
+  margin-right: 0.5rem;
+}
+
+.facebook {
+  color: rgb(13, 55, 251);
+}
+
+.fab {
+  font-size: 1.5em;
+}
+
+.detailCasts {
+  white-space: nowrap;
+  overflow-x:auto;
+  margin: 1rem -0.5rem 1.5rem -0.5rem;
+}
+
+.detailReviews span{
+  color: gray;
+  font-weight: 600;
+}
+
+.detailMoreMedia {
+  margin: 5rem auto 0 auto;
+  color: white;
+}
+
+.detailMoreMedia h2 {
+  margin-left: 2.5%;
+}
+
+@media screen and (max-width: 600px) {
+  #detailMain {
+    width: 90%;
+  }
+  .detailMoreInfo {
+    margin: 1rem 0 3rem 0;
+  }
+  .detailMoreMedia h2 {
+    margin-left: 13%;
+  }
+}

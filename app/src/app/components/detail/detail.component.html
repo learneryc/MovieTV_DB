@@ -1,0 +1,79 @@
+<div id="detailMain">
+  <div class="container">
+
+    <div class="row">
+      <div class="embed-responsive embed-responsive-16by9 col-sm-8">
+        <youtube-player videoId="{{this.videoKey}}"></youtube-player>
+      </div>
+
+      <div class="col-sm-1"></div>
+
+      <div class="col" *ngIf="detail">
+        <h1>{{detail.name}}</h1>
+        <p *ngIf="detail.tagline!='N/A'" class="detailTagline">{{detail.tagline}}</p>
+        <p class="detailTime">
+          <span *ngIf="detail.release_date!='N/A'">{{detail.release_date.slice(0,4)}} &nbsp;| &nbsp;</span>
+          <span *ngIf="detail.vote_average!='N/A'"><span class="ratingAsterisk">&#9733;</span> {{detail.vote_average}} | </span>
+          <span *ngIf="detail.runtime">{{detail.runtime}}</span></p>
+        <p *ngIf="detail.genres" class="detailInfo"><span class="detailInfoTitle">Genres : </span><span>{{detail.genres}}</span></p>
+        <p *ngIf="detail.spoken_languages" class="detailInfo"><span class="detailInfoTitle">Spoken Languages : </span><span>{{detail.spoken_languages}}</span></p>
+
+        <button class="btn btn-primary" (click)="changeWatchlist()">{{buttonInfo[add]}}</button>
+
+        <ngb-alert #watchlistAlert *ngIf="alertMessage" type={{alertType[add]}} (closed)="alertMessage = ''">{{ alertMessage }}
+        </ngb-alert>
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="detail">
+
+    <div class="detailMoreInfo">
+      <div *ngIf="detail.overview != 'N/A'" class="detailDescription">
+        <h5>Description</h5>
+        <p>{{detail.overview}}</p>
+      </div>
+
+      <h5>Share</h5>
+      <a class="twitter" target="_blank"
+         href="https://twitter.com/intent/tweet?text=Watch {{detail.name}}%0A
+{{youtubeUrl+this.videoKey}}%0A%23USC %23CSCI571 %23FightOn">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      <a class="facebook" target="_blank"
+         href="https://www.facebook.com/sharer/sharer.php?u={{youtubeUrl+this.videoKey}}">
+        <i class="fab fa-facebook-square fa-2x"></i>
+      </a>
+    </div>
+
+    <div *ngIf="cast.length">
+      <h2>Full Cast and Crew</h2>
+      <div class="detailCasts">
+        <app-cast-card *ngFor="let c of cast" [cast]="c" (click)="popUp(c)"></app-cast-card>
+      </div>
+    </div>
+
+
+    <div *ngIf="reviews.length" class="detailReviews">
+      <h2>Reviews &nbsp;<span>{{reviews.length}}</span></h2>
+      <app-review *ngFor="let r of reviews" [review]="r"></app-review>
+    </div>
+
+
+
+  </div>
+
+  <div *ngIf="recommendation.length" class="detailMoreMedia">
+    <h2>Recommended {{mediaType[this.category]}}</h2>
+    <app-card-carousel [cardNum]="cardNum" [items]="recommendation" [type]="this.category"></app-card-carousel>
+  </div>
+
+  <div *ngIf="similar.length" class="detailMoreMedia">
+    <h2>Similar {{mediaType[this.category]}}</h2>
+    <app-card-carousel [cardNum]="cardNum" [items]="similar" [type]="this.category"></app-card-carousel>
+  </div>
+</div>
+
+
+

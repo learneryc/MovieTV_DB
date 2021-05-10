@@ -1,0 +1,83 @@
+.reviewIntro.row {
+  margin-bottom: 1.3rem;
+}
+
+.reviewRating {
+  width: 2.9rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+.reviewAsterisk {
+  font-size: 1em;
+}
+
+.ratingNumber {
+  font-size: 0.6em;
+  vertical-align: 3px;
+}
+
+img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: 1.5rem 0 0 3rem;
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(51,19,109);
+  font-size: 0.9em;
+}
+
+
+.col p {
+  font-size: 0.9em;
+}
+
+.authorInfo {
+  color: gray;
+}
+
+.reviewContent {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.container {
+  background-color: white;
+  border-radius: 1rem;
+  color: black;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.col-sm-2 {
+  padding: 0;
+  min-width: 7rem;
+}
+
+.col-sm-auto {
+  padding: 0;
+  margin-right: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.col {
+  padding: 0;
+}
+
+.reviewInfo {
+  padding: 1.3rem 8% 1.5rem 1.5rem;
+}
+
+

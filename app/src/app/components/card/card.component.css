@@ -1,0 +1,27 @@
+app-poster-card {
+  width: 13.66%;
+  display: inline-block;
+  position: relative;
+  margin: 0 1.5%;
+  overflow:hidden;
+}
+app-poster-card:hover {
+  transform: scale(1.1);
+}
+
+.posterCards {
+  padding: 1.5rem 2% 3rem 2%;
+}
+
+@media screen and (max-width: 600px) {
+  app-poster-card {
+    width: 70%;
+    margin: 0 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .posterCards {
+    padding-bottom: 1.5rem;
+  }
+}

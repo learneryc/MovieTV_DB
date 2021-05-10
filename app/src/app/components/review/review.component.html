@@ -1,0 +1,24 @@
+<div class="container" *ngIf="review">
+
+  <div class="row">
+    <div class="col-sm-2">
+      <img [src] = "review.avatar_path">
+    </div>
+
+    <div class="col reviewInfo">
+      <div class="row reviewIntro">
+        <h5 class="col-sm-auto">A review created by {{review.author}}</h5>
+
+        <div class="col">
+          <h5 class="reviewRating"><span class="reviewAsterisk">&#9733;</span><span class="ratingNumber"> {{review.rating}}</span></h5>
+        </div>
+      </div>
+
+      <p class="authorInfo" *ngIf="date">Written by {{review.author}} on {{date | date:'longDate'}}, {{date | date:'mediumTime'}}</p>
+      <p class="reviewContent" *ngIf="review.content!='N/A'">{{review.content}}</p>
+      <a [href]="review.url" target="_blank" *ngIf="review.url!='N/A'">Read the rest</a>
+    </div>
+
+  </div>
+</div>
+

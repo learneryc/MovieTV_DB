@@ -1,0 +1,16 @@
+<!--<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>-->
+<ng-template #rt let-r="result" let-t="term">
+  <div>
+    <a [href]="'/watch/'+r.media_type+'/'+r.id">
+      <img [src]="r.backdrop_path">
+      <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
+    </a>
+  </div>
+</ng-template>
+<div>
+  <input id="typeahead-http" type="text" placeholder="Search"
+         [(ngModel)]="model" [ngbTypeahead]="search" [resultTemplate]="rt" [inputFormatter]="formatter" />
+</div>

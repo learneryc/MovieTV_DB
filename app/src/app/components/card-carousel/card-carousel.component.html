@@ -1,0 +1,7 @@
+<ngb-carousel [interval]="0" [showNavigationIndicators]="showNavigationIndicators"
+              [showNavigationArrows]="showNavigationArrows"
+              [pauseOnHover]="true" [pauseOnFocus]="true">
+  <ng-template ngbSlide *ngFor="let p of pages">
+    <app-card [item]="p" [type]="type"></app-card>
+  </ng-template>
+</ngb-carousel>

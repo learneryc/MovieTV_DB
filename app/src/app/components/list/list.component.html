@@ -1,0 +1,6 @@
+<div class="listCards" *ngIf="watchlist.length">
+    <h2>My Watchlist</h2>
+    <app-poster-card *ngFor="let w of watchlist" [type]="w.type" [item]="w"></app-poster-card>
+</div>
+
+<h1 *ngIf="watchlist.length === 0">No items found in Watchlist.</h1>

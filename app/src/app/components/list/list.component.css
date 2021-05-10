@@ -1,0 +1,41 @@
+app-poster-card {
+  width: 13.66%;
+  display: inline-block;
+  position: relative;
+  margin: 0 1.5% 8% 1.5%;
+  overflow:hidden;
+}
+app-poster-card:hover {
+  transform: scale(1.1);
+}
+
+.listCards {
+  width: 70%;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 4rem 0 4rem 0;
+  color: white;
+}
+
+h1 {
+  color: white;
+  margin-top: 8rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  app-poster-card {
+    width: 100%;
+    margin: 0 0 4rem 0;
+  }
+
+  .listCards {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+}

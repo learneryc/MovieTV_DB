@@ -1,0 +1,19 @@
+#nav-bar {
+  background-color: rgb(4,10,36);
+  padding-right: 3rem;
+  padding-left: 3rem;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 575px) {
+  .nav-item {
+    text-align: right;
+    margin-right: 1rem;
+  }
+}

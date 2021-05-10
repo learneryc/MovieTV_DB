@@ -1,0 +1,51 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{person.name}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-2">
+        <img [src]="person.profile_path">
+      </div>
+
+      <div class="col-sm-1"></div>
+
+      <div class="modalIntro col">
+        <p *ngIf="person.birthday!='N/A'">Birth: {{person.birthday}}</p>
+        <p *ngIf="person.place_of_birth!='N/A'">Birth Place: {{person.place_of_birth}}</p>
+        <p *ngIf="person.gender>=0&&person.gender<=2">Gender: {{gender[person.gender]}}</p>
+        <p *ngIf="person.homepage!='N/A'">
+          Website: <a target="_blank" [href]="person.homepage">{{person.homepage}}</a></p>
+        <p *ngIf="person.known_for_department!='N/A'">Known For: {{person.known_for_department}}</p>
+        <p *ngIf="person.also_known_as.length">Also Known as: {{person.also_known_as}}</p>
+
+        <div class="castLinks">
+          <a *ngIf="castEx.imdb_id!='N/A'" target="_blank" [href]="castEx.imdb_id"
+             ngbPopover="Visit Imdb" triggers="mouseenter:mouseleave"> <i class="fab fa-imdb"></i></a>
+
+          <a *ngIf="castEx.instagram_id!='N/A'" target="_blank" [href]="castEx.instagram_id"
+             ngbPopover="Visit Instagram" triggers="mouseenter:mouseleave"><i class="fab fa-instagram"></i></a>
+
+          <a *ngIf="castEx.facebook_id!='N/A'" target="_blank" [href]="castEx.facebook_id"
+             ngbPopover="Visit Facebook" triggers="mouseenter:mouseleave"><i class="fab fa-facebook-square"></i></a>
+
+          <a *ngIf="castEx.twitter_id!='N/A'" target="_blank" [href]="castEx.twitter_id"
+             ngbPopover="Visit Twitter" triggers="mouseenter:mouseleave"><i class="fab fa-twitter"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="person.biography!='N/A'" class="biography">
+    <h4>Biography</h4>
+    <p>{{person.biography}}</p>
+  </div>
+
+
+</div>
