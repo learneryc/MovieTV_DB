@@ -1,5 +1,6 @@
 # MovieTV_DB
 
+Here is [video demo](https://www.youtube.com/watch?v=szn_U-yucVY)
 
 ## Install Angular CLI
 Run `npm install -g @angular/cli`
